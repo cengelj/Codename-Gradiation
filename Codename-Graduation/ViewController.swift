@@ -19,14 +19,14 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	override func prepareForSegue(seque: UIStoryboardSegue, sender: AnyObject?){
+	override func prepare(for seque: UIStoryboardSegue, sender: Any?){
 		
 	}
 	
-	@IBAction func nameSearch(sender: UIButton) {
+	@IBAction func nameSearch(_ sender: UIButton) {
 		searchType = "name"
 	}
-	@IBAction func stateSearch(sender: UIButton) {
+	@IBAction func stateSearch(_ sender: UIButton) {
 		searchType = "state"
 	}
 
