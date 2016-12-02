@@ -10,6 +10,7 @@ import UIKit
 
 class SearchController: UIViewController{
 	var searchType: String?
+    var change = "one"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
