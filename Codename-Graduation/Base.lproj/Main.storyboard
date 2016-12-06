@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,12 +75,38 @@
                     <view key="view" contentMode="scaleToFill" id="BKB-jX-3q5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teB-D6-V5T">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zwo-pY-hYo" id="OdV-aS-J04"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="teB-D6-V5T" firstAttribute="top" secondItem="67I-AY-1Tu" secondAttribute="bottom" id="CFh-p8-NYN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="teB-D6-V5T" secondAttribute="trailing" constant="16" id="HNP-aB-1ck"/>
+                            <constraint firstItem="teB-D6-V5T" firstAttribute="leading" secondItem="BKB-jX-3q5" secondAttribute="leadingMargin" constant="16" id="a9M-9U-3Ok"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="RkH-yE-gSz" id="7ca-bH-9fA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cji-qy-lLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="RkH-yE-gSz">
+                    <connections>
+                        <outlet property="delegate" destination="zwo-pY-hYo" id="JVn-Sb-JdC"/>
+                        <outlet property="searchBar" destination="teB-D6-V5T" id="CFf-7n-cBx"/>
+                        <outlet property="searchContentsController" destination="zwo-pY-hYo" id="TBV-C4-eyq"/>
+                        <outlet property="searchResultsDataSource" destination="zwo-pY-hYo" id="Igt-Np-6BQ"/>
+                        <outlet property="searchResultsDelegate" destination="zwo-pY-hYo" id="9pL-Hl-s1Y"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1259" y="381"/>
+            <point key="canvasLocation" x="1258.5" y="380.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -20,7 +20,9 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	override func prepare(for seque: UIStoryboardSegue, sender: Any?){
-		
+        if let SearchController = seque.destination as? SearchController {
+            SearchController.searchType = searchType
+        }
 	}
 	
 	@IBAction func nameSearch(_ sender: UIButton) {

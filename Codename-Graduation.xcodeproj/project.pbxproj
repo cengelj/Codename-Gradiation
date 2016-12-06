@@ -48,7 +48,7 @@
 		1EFCB5301DF05EE100375774 /* Codename-GraduationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Codename-GraduationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFCB5341DF05EE100375774 /* Codename_GraduationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codename_GraduationUITests.swift; sourceTree = "<group>"; };
 		1EFCB5361DF05EE100375774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EFCB5421DF067C900375774 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		1EFCB5421DF067C900375774 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
