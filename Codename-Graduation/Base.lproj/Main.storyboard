@@ -18,7 +18,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="376"/>
+            <point key="canvasLocation" x="1705" y="-253"/>
+        </scene>
+        <!--GradeController-->
+        <scene sceneID="AT8-9w-TY9">
+            <objects>
+                <viewController id="GT4-lc-RMA" userLabel="GradeController" customClass="GradeController" customModule="Codename_Graduation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yAY-pN-HdG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pmr-Q8-l4L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JSC-vC-7DJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-j0-6oD">
+                                <rect key="frame" x="114" y="322" width="148.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nes-j0-6oD" firstAttribute="centerY" secondItem="JSC-vC-7DJ" secondAttribute="centerY" id="Slb-9X-d7p"/>
+                            <constraint firstItem="Nes-j0-6oD" firstAttribute="centerX" secondItem="JSC-vC-7DJ" secondAttribute="centerX" id="atm-Cp-s4n"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XM2-Pd-bdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="376"/>
+        </scene>
+        <!--TeachController-->
+        <scene sceneID="GoV-Mg-mGl">
+            <objects>
+                <viewController id="ZYY-QI-i77" userLabel="TeachController" customClass="TeacherController" customModule="Codename_Graduation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9US-fT-bPC"/>
+                        <viewControllerLayoutGuide type="bottom" id="EHz-ty-Zhf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62U-JT-wem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laq-iP-df9">
+                                <rect key="frame" x="106" y="322" width="163" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Laq-iP-df9" firstAttribute="centerX" secondItem="62U-JT-wem" secondAttribute="centerX" id="2tJ-HT-9ht"/>
+                            <constraint firstItem="Laq-iP-df9" firstAttribute="centerY" secondItem="62U-JT-wem" secondAttribute="centerY" id="kp7-vt-ni8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boc-vt-lzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704.8" y="1092.5037481259371"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="37C-lC-wCn">
@@ -60,11 +120,17 @@
                                 <rect key="frame" x="-4" y="265" width="383" height="201"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Grade Calculator"/>
+                                <connections>
+                                    <segue destination="GT4-lc-RMA" kind="show" id="9xm-jV-Nae"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucN-jB-0Cr">
                                 <rect key="frame" x="-4" y="466" width="383" height="201"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Teacher Info"/>
+                                <connections>
+                                    <segue destination="ZYY-QI-i77" kind="show" id="1Og-hH-mNL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
