@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,34 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Codename_Graduation" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="AeE-gU-Kr3">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Item" style="plain" id="Mye-ej-3dp">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gBj-SE-UJA">
-                                    <rect key="frame" x="16" y="7" width="133" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                    <state key="normal" title="Search By Name"/>
-                                    <connections>
-                                        <action selector="nameSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCe-4b-zwf"/>
-                                        <segue destination="zwo-pY-hYo" kind="show" id="Ax5-71-d0g"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem title="Item" style="plain" id="eg3-oa-LOi">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GA9-Hk-yXH">
-                                    <rect key="frame" x="157" y="7" width="133" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                    <state key="normal" title="Search By State"/>
-                                    <connections>
-                                        <action selector="stateSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfn-Xa-gCK"/>
-                                        <segue destination="zwo-pY-hYo" kind="show" id="nhW-eB-9te"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="AeE-gU-Kr3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,52 +35,5 @@
             </objects>
             <point key="canvasLocation" x="-310" y="376"/>
         </scene>
-        <!--Search Controller-->
-        <scene sceneID="QKi-Zg-vx7">
-            <objects>
-                <viewController id="zwo-pY-hYo" userLabel="Search Controller" customClass="SearchController" customModule="Codename_Graduation" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="67I-AY-1Tu"/>
-                        <viewControllerLayoutGuide type="bottom" id="Os0-tJ-Ljd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BKB-jX-3q5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teB-D6-V5T">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="zwo-pY-hYo" id="OdV-aS-J04"/>
-                                </connections>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="teB-D6-V5T" firstAttribute="top" secondItem="67I-AY-1Tu" secondAttribute="bottom" id="CFh-p8-NYN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="teB-D6-V5T" secondAttribute="trailing" constant="16" id="HNP-aB-1ck"/>
-                            <constraint firstItem="teB-D6-V5T" firstAttribute="leading" secondItem="BKB-jX-3q5" secondAttribute="leadingMargin" constant="16" id="a9M-9U-3Ok"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="RkH-yE-gSz" id="7ca-bH-9fA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cji-qy-lLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="RkH-yE-gSz">
-                    <connections>
-                        <outlet property="delegate" destination="zwo-pY-hYo" id="JVn-Sb-JdC"/>
-                        <outlet property="searchBar" destination="teB-D6-V5T" id="CFf-7n-cBx"/>
-                        <outlet property="searchContentsController" destination="zwo-pY-hYo" id="TBV-C4-eyq"/>
-                        <outlet property="searchResultsDataSource" destination="zwo-pY-hYo" id="Igt-Np-6BQ"/>
-                        <outlet property="searchResultsDelegate" destination="zwo-pY-hYo" id="9pL-Hl-s1Y"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="1258.5" y="380.5"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nhW-eB-9te"/>
-    </inferredMetricsTieBreakers>
 </document>

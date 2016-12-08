@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController, UISearchResultsUpdating{
 	var searchType: String?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		let searchController = UISearchController(searchResultsController: nil)
+		searchController.searchResultsUpdater = self
+		searchController.dimsBackgroundDuringPresentation = false
+		definesPresentationContext = true
+		tableView.tableHeaderView = searchController.searchBar
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -24,13 +30,11 @@ class ViewController: UIViewController {
             SearchController.searchType = searchType
         }
 	}
+	func updateSearchResults(for searchController: UISearchController){
+		print("\(searchController.searchBar.text)")
+		//manage the searching
+	}
 	
-	@IBAction func nameSearch(_ sender: UIButton) {
-		searchType = "name"
-	}
-	@IBAction func stateSearch(_ sender: UIButton) {
-		searchType = "state"
-	}
 
 
 }

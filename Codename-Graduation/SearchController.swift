@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchController: UIViewController, UISearchBarDelegate{
+class SearchController: UISearchController{
 	var searchType: String?
     var change = "one"
 	
@@ -20,8 +20,12 @@ class SearchController: UIViewController, UISearchBarDelegate{
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	override func prepare(for seque: UIStoryboardSegue, sender: Any?){
-		//Pass the name of the search to new view that will show stuff
-	}
-    
+	
+	
+	//override func prepare(for seque: UIStoryboardSegue, sender: Any?){
+		//if let SearchController = seque.destination as? SearchController {
+			//SearchController.searchType = searchType
+		//}
+	//}
+	
 }
