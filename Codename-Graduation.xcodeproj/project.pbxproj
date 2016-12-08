@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E847ED41DF8475F006B15B7 /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED31DF8475F006B15B7 /* SearchData.swift */; };
 		1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCB5141DF05EE000375774 /* AppDelegate.swift */; };
 		1EFCB5171DF05EE000375774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCB5161DF05EE000375774 /* ViewController.swift */; };
 		1EFCB51A1DF05EE000375774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCB5181DF05EE000375774 /* Main.storyboard */; };
@@ -59,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E847ED31DF8475F006B15B7 /* SearchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
 		1EFCB5111DF05EE000375774 /* Codename-Graduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codename-Graduation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFCB5141DF05EE000375774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EFCB5161DF05EE000375774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,9 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				1EFCB5141DF05EE000375774 /* AppDelegate.swift */,
-				1EFCB5161DF05EE000375774 /* ViewController.swift */,
 				1EFCB5421DF067C900375774 /* SearchController.swift */,
-				1E847ED31DF8475F006B15B7 /* SearchData.swift */,
+				1EFCB5161DF05EE000375774 /* ViewController.swift */,
 				1EFCB5181DF05EE000375774 /* Main.storyboard */,
 				1EFCB51B1DF05EE000375774 /* Assets.xcassets */,
 				D0A278BA1DF6EDB3004E60FF /* AppIcon.appiconset */,
@@ -368,7 +365,6 @@
 				1EFCB5171DF05EE000375774 /* ViewController.swift in Sources */,
 				1EFCB5431DF067C900375774 /* SearchController.swift in Sources */,
 				1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */,
-				1E847ED41DF8475F006B15B7 /* SearchData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

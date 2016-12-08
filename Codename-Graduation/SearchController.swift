@@ -8,24 +8,25 @@
 
 import UIKit
 
-class SearchController: UISearchController{
+class SearchController: UITableViewController, UISearchResultsUpdating{
 	var searchType: String?
-    var change = "one"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		let searchController = UISearchController(searchResultsController: nil)
+		searchController.searchResultsUpdater = self
+		searchController.dimsBackgroundDuringPresentation = false
+		definesPresentationContext = true
+		tableView.tableHeaderView = searchController.searchBar
 	}
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	
-	
-	//override func prepare(for seque: UIStoryboardSegue, sender: Any?){
-		//if let SearchController = seque.destination as? SearchController {
-			//SearchController.searchType = searchType
-		//}
-	//}
+	func updateSearchResults(for searchController: UISearchController){
+		print("\(searchController.searchBar.text)")
+		//manage the searching
+	}
 	
 }
