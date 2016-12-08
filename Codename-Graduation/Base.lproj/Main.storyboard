@@ -14,9 +14,22 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchController" customModule="Codename_Graduation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mcy-u3-c2e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="y5k-aN-eAP" id="7Eu-MR-aGP"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="gZs-q0-SkC"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="AeE-gU-Kr3"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mcy-u3-c2e" id="cES-aR-p1v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="y5k-aN-eAP" userLabel="SearchViewData" customClass="SearchViewData" customModule="Codename_Graduation" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1705" y="-253"/>
         </scene>

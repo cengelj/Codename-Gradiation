@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SearchController: UITableViewController, UISearchResultsUpdating{
-	var searchType: String?
+class SearchController: UIViewController, UISearchResultsUpdating, UITableViewDelegate{
 	
+	@IBOutlet var tableView: UITableView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		

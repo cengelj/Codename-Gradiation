@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E847ED61DF9B499006B15B7 /* GradeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED51DF9B499006B15B7 /* GradeController.swift */; };
 		1E847ED81DF9B4A3006B15B7 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */; };
+		1E847EDA1DF9BA4B006B15B7 /* SearchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */; };
 		1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCB5141DF05EE000375774 /* AppDelegate.swift */; };
 		1EFCB5171DF05EE000375774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCB5161DF05EE000375774 /* ViewController.swift */; };
 		1EFCB51A1DF05EE000375774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCB5181DF05EE000375774 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		1E847ED51DF9B499006B15B7 /* GradeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeController.swift; sourceTree = "<group>"; };
 		1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
+		1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewData.swift; sourceTree = "<group>"; };
 		1EFCB5111DF05EE000375774 /* Codename-Graduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codename-Graduation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFCB5141DF05EE000375774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EFCB5161DF05EE000375774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,8 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				1EFCB5141DF05EE000375774 /* AppDelegate.swift */,
-				1EFCB5421DF067C900375774 /* SearchController.swift */,
 				1EFCB5161DF05EE000375774 /* ViewController.swift */,
+				1EFCB5421DF067C900375774 /* SearchController.swift */,
+				1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */,
 				1E847ED51DF9B499006B15B7 /* GradeController.swift */,
 				1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */,
 				1EFCB5181DF05EE000375774 /* Main.storyboard */,
@@ -370,6 +373,7 @@
 			files = (
 				1EFCB5171DF05EE000375774 /* ViewController.swift in Sources */,
 				1E847ED81DF9B4A3006B15B7 /* TeacherController.swift in Sources */,
+				1E847EDA1DF9BA4B006B15B7 /* SearchViewData.swift in Sources */,
 				1EFCB5431DF067C900375774 /* SearchController.swift in Sources */,
 				1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */,
 				1E847ED61DF9B499006B15B7 /* GradeController.swift in Sources */,
