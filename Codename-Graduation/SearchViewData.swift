@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewData: NSObject, UITableViewDataSource{
 	var data: [String]?
+	
 	override init(){
 		super.init()
 		data = ["one", "two", "three"]

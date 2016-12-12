@@ -14,10 +14,13 @@ class GradeController: UIViewController{
 	@IBOutlet weak var percentWantedText: UITextField!
 	@IBOutlet weak var percentWantedSlide: UISlider!
 	@IBOutlet weak var finalTextOutput: UILabel!
-	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+	}
 	@IBAction func gradeWantedEntered(_ sender: UITextField) {
-		var numText = Int(sender.text!)
-		var text = Float(numText!)
+		let numText = Int(sender.text!)
+		let text = Float(numText!)
 		percentWantedSlide.setValue(text, animated: false)
 	}
 	
