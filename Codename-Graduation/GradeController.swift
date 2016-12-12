@@ -10,4 +10,23 @@ import UIKit
 
 class GradeController: UIViewController{
 	
+	@IBOutlet weak var percentFinalGrade: UITextField!
+	@IBOutlet weak var percentWantedText: UITextField!
+	@IBOutlet weak var percentWantedSlide: UISlider!
+	@IBOutlet weak var finalTextOutput: UILabel!
+	
+	@IBAction func gradeWantedEntered(_ sender: UITextField) {
+		var numText = Int(sender.text!)
+		var text = Float(numText!)
+		percentWantedSlide.setValue(text, animated: false)
+	}
+	
+	@IBAction func calculateNeeded(_ sender: UIButton) {
+		
+	}
+	
+	@IBAction func setSlideValue(_ sender: UISlider) {
+		sender.setValue(round(sender.value), animated: false)
+		percentWantedText.text = "\(percentWantedSlide.value)%"
+	}
 }
