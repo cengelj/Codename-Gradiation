@@ -120,6 +120,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentGrade" destination="p4h-xS-E1u" id="2RS-qa-gAW"/>
                         <outlet property="finalTextOutput" destination="x2k-Me-M8X" id="tiK-oY-6ak"/>
                         <outlet property="percentFinalGrade" destination="wts-Dm-hHh" id="nby-5E-ERK"/>
                         <outlet property="percentWantedSlide" destination="PR0-cN-ISk" id="e8P-v9-0Lc"/>
