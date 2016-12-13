@@ -10,10 +10,13 @@ import UIKit
 
 class SearchViewData: NSObject, UITableViewDataSource{
 	var data: [String]?
+    var collegeDictionary: [String:Int]?
+    let searchDataURL = "collegeInfo"
 	
 	override init(){
 		super.init()
 		data = ["one", "two", "three"]
+        readDataFromFile(file: searchDataURL)
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -25,6 +28,20 @@ class SearchViewData: NSObject, UITableViewDataSource{
 		
 		return tabRet
 	}
+    
+    func readDataFromFile(file: String?) throws -> [String] {
+        guard let path = Bundle.main.path(forResource: file, ofType: nil) else {
+            throw NSError(domain: NSCocoaErrorDomain, code: NSFileNoSuchFileError, userInfo: [ NSFilePathErrorKey : file! ])
+        }
+        let content = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        print(path)
+        print(content)
+        return content.components(separatedBy: String)
+    }
+    
+    func dataTranslation(){
+        
+    }
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return data!.count

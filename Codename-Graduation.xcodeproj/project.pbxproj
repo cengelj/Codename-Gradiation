@@ -41,6 +41,7 @@
 		D0A278E61DF6EDB3004E60FF /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A278CF1DF6EDB3004E60FF /* Icon-App-83.5x83.5@2x.png */; };
 		D0A278E71DF6EDB3004E60FF /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A278D01DF6EDB3004E60FF /* Icon-Small-50x50@1x.png */; };
 		D0A278E81DF6EDB3004E60FF /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A278D11DF6EDB3004E60FF /* Icon-Small-50x50@2x.png */; };
+		D0A278EB1DFED88C004E60FF /* collegeInfo.csv in Resources */ = {isa = PBXBuildFile; fileRef = D0A278EA1DFED88C004E60FF /* collegeInfo.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		D0A278CF1DF6EDB3004E60FF /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 		D0A278D01DF6EDB3004E60FF /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
 		D0A278D11DF6EDB3004E60FF /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		D0A278EA1DFED88C004E60FF /* collegeInfo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = collegeInfo.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		1EFCB5131DF05EE000375774 /* Codename-Graduation */ = {
 			isa = PBXGroup;
 			children = (
+				D0A278E91DFED876004E60FF /* Data */,
 				1EFCB5141DF05EE000375774 /* AppDelegate.swift */,
 				1EFCB5161DF05EE000375774 /* ViewController.swift */,
 				1EFCB5421DF067C900375774 /* SearchController.swift */,
@@ -212,6 +215,14 @@
 				D0A278D11DF6EDB3004E60FF /* Icon-Small-50x50@2x.png */,
 			);
 			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		D0A278E91DFED876004E60FF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D0A278EA1DFED88C004E60FF /* collegeInfo.csv */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				D0A278D71DF6EDB3004E60FF /* Icon-App-29x29@2x.png in Resources */,
 				D0A278E61DF6EDB3004E60FF /* Icon-App-83.5x83.5@2x.png in Resources */,
 				D0A278DC1DF6EDB3004E60FF /* Icon-App-57x57@1x.png in Resources */,
+				D0A278EB1DFED88C004E60FF /* collegeInfo.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
