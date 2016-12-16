@@ -9,14 +9,13 @@
 import UIKit
 
 class SearchViewData: NSObject, UITableViewDataSource{
-	var data: [String]?
-    var collegeDictionary: [String:Int]?
+	var data = [String]()
+    var collegeDictionary = [String:String]()
     let searchDataURL = "collegeInfo"
 	
 	override init(){
 		super.init()
-		data = ["one", "two", "three"]
-        if let aStreamReader = StreamReader(path: "Data/collegeInfo.csv") {
+        if let aStreamReader = StreamReader(path: "/Users/s011878/Documents/XCode/Codename-Graduation/Codename-Graduation/collegeInfo.csv") {
             defer {
                 aStreamReader.close()
             }
@@ -27,9 +26,15 @@ class SearchViewData: NSObject, UITableViewDataSource{
                 var name = ""
                 var ID = ""
                 var quoteCount = 0
+				var priorQuote = false
+				var priorQuotes = 0
                 loop: for character in line.characters {
                     if !nameFound {
-                        if character == ","{
+						if character == "\""{
+							priorQuote = !priorQuote
+							priorQuotes = 1
+						}
+                        else if character == "," && !priorQuote{
                             if !nameEnd {
                                 nameFound = true
                             }
@@ -43,35 +48,47 @@ class SearchViewData: NSObject, UITableViewDataSource{
                         if character == "\"" {
                             quoteCount += 1
                         }
-                        else if quoteCount == 12 {
-                            quoteCount = 13
+                        else if quoteCount == 11+priorQuotes{
+                            quoteCount = 12+priorQuotes
                         }
-                        else if quoteCount == 13 {
+                        else if quoteCount == 12+priorQuotes{
                             if character == ","{
                                 IDEnd = !IDEnd
                             }
                             else if !IDEnd {
                                 ID.append(character)
                             }
+							else if IDEnd{
+								let temp = Int(ID)
+								if(ID != "" && temp != nil){
+									collegeDictionary[name] = ID
+									if !(data.contains(name)){
+										data.insert(name, at: (data.count))
+										print("Found School \(name) ID: \(ID)")
+									}
+								}
+								break loop
+							}
                         }
                     }
                 }
             }
-        }
+		}
+		data.sort()
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let tabRet = UITableViewCell()
-		tabRet.backgroundColor = UIColor.darkGray
+		tabRet.backgroundColor = UIColor.lightGray
 		tabRet.textLabel!.font = UIFont(name: "helvetica neue", size: 20)
 		tabRet.textLabel?.textAlignment = .center
-		tabRet.textLabel?.text = data?[indexPath.row]
+		tabRet.textLabel?.text = data[indexPath.row]
 		
 		return tabRet
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return data!.count
+		return data.count
 	}
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return 1
@@ -81,6 +98,7 @@ class SearchViewData: NSObject, UITableViewDataSource{
 
 // Credit Martin R @ http://stackoverflow.com/questions/24581517/read-a-file-url-line-by-line-in-swift
 // This is used to parse through large files to prevent overflows while reading through thousands of lines of text 
+// Don't Touch
 
 class StreamReader  {
     
@@ -160,4 +178,4 @@ extension StreamReader : Sequence {
             return self.nextLine()
         }
     }
-} // End of Code
+} // End of Credited Code
