@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import WebKit
 
 class SearchController: UIViewController, UISearchResultsUpdating, UITableViewDelegate{
-	
+	var selectedID = ""
 	@IBOutlet var tableView: UITableView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,5 +29,16 @@ class SearchController: UIViewController, UISearchResultsUpdating, UITableViewDe
 		print("\(searchController.searchBar.text)")
 		//manage the searching
 	}
-	
+	func tableView(_: UITableView, didSelectRowAt: IndexPath){
+		let searchResultsController = SearchResultsController()
+		var arr = Array(UserDefaults.standard.array(forKey: "collegeArray")!)
+		var name = arr[didSelectRowAt.row] as! String
+		var dict = UserDefaults.standard.dictionary(forKey: "collegeDictionary")
+		selectedID = dict?[name] as! String
+		
+		searchResultsController.ID = selectedID
+		self.navigationController?.pushViewController(searchResultsController, animated: true)
+
+		print("ID: \(selectedID)")
+	}
 }

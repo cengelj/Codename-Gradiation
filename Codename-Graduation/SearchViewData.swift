@@ -15,66 +15,77 @@ class SearchViewData: NSObject, UITableViewDataSource{
 	
 	override init(){
 		super.init()
-        if let aStreamReader = StreamReader(path: "/Users/s011878/Documents/XCode/Codename-Graduation/Codename-Graduation/collegeInfo.csv") {
-            defer {
-                aStreamReader.close()
-            }
-            while let line = aStreamReader.nextLine() {
-                var nameFound = false
-                var nameEnd = true
-                var IDEnd = true
-                var name = ""
-                var ID = ""
-                var quoteCount = 0
-				var priorQuote = false
-				var priorQuotes = 0
-                loop: for character in line.characters {
-                    if !nameFound {
-						if character == "\""{
-							priorQuote = !priorQuote
-							priorQuotes = 1
-						}
-                        else if character == "," && !priorQuote{
-                            if !nameEnd {
-                                nameFound = true
-                            }
-                            nameEnd = !nameEnd
-                        }
-                        else if !nameEnd {
-                            name.append(character)
-                        }
-                    }
-                    else {
-                        if character == "\"" {
-                            quoteCount += 1
-                        }
-                        else if quoteCount == 11+priorQuotes{
-                            quoteCount = 12+priorQuotes
-                        }
-                        else if quoteCount == 12+priorQuotes{
-                            if character == ","{
-                                IDEnd = !IDEnd
-                            }
-                            else if !IDEnd {
-                                ID.append(character)
-                            }
-							else if IDEnd{
-								let temp = Int(ID)
-								if(ID != "" && temp != nil){
-									collegeDictionary[name] = ID
-									if !(data.contains(name)){
-										data.insert(name, at: (data.count))
-										print("Found School \(name) ID: \(ID)")
-									}
-								}
-								break loop
-							}
-                        }
-                    }
-                }
-            }
+		if let dt = UserDefaults.standard.array(forKey: "collegeArray"), let cd = UserDefaults.standard.dictionary(forKey: "collegeDictionary"){
+			//Only works because we're the only ones doing the saving...
+			collegeDictionary = cd as! [String : String]
+			data = dt as! [String]
 		}
-		data.sort()
+		else{
+			if let aStreamReader = StreamReader(path: "/Users/s011878/Documents/XCode/Codename-Graduation/Codename-Graduation/collegeInfo.csv") {
+				defer {
+					aStreamReader.close()
+				}
+				while let line = aStreamReader.nextLine() {
+					var nameFound = false
+					var nameEnd = true
+					var IDEnd = true
+					var name = ""
+					var ID = ""
+					var quoteCount = 0
+					var priorQuote = false
+					var priorQuotes = 0
+					loop: for character in line.characters {
+						if !nameFound {
+							if character == "\""{
+								priorQuote = !priorQuote
+								priorQuotes = 1
+							}
+							else if character == "," && !priorQuote{
+								if !nameEnd {
+									nameFound = true
+								}
+								nameEnd = !nameEnd
+							}
+							else if !nameEnd {
+								name.append(character)
+							}
+						}
+						else {
+							if character == "\"" {
+								quoteCount += 1
+							}
+							else if quoteCount == 11+priorQuotes{
+								quoteCount = 12+priorQuotes
+							}
+							else if quoteCount == 12+priorQuotes{
+								if character == ","{
+									IDEnd = !IDEnd
+								}
+								else if !IDEnd {
+									ID.append(character)
+								}
+								else if IDEnd{
+									let temp = Int(ID)
+									if(ID != "" && temp != nil){
+										collegeDictionary[name] = ID
+										if !(data.contains(name)){
+											data.insert(name, at: (data.count))
+											print("Found School \(name) ID: \(ID)")
+										}
+									}
+									break loop
+								}
+							}
+						}
+					}
+				}
+			}
+			data.sort()
+			
+			UserDefaults.standard.setValue(collegeDictionary, forKey: "collegeDictionary")
+			UserDefaults.standard.setValue(data, forKey: "collegeArray")
+			UserDefaults.standard.synchronize()
+		}
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

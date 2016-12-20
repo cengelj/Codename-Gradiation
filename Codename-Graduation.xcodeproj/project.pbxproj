@@ -10,6 +10,7 @@
 		1E847ED61DF9B499006B15B7 /* GradeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED51DF9B499006B15B7 /* GradeController.swift */; };
 		1E847ED81DF9B4A3006B15B7 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */; };
 		1E847EDA1DF9BA4B006B15B7 /* SearchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */; };
+		1E847EDC1E0453D5006B15B7 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847EDB1E0453D5006B15B7 /* SearchResultsController.swift */; };
 		1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCB5141DF05EE000375774 /* AppDelegate.swift */; };
 		1EFCB5171DF05EE000375774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCB5161DF05EE000375774 /* ViewController.swift */; };
 		1EFCB51A1DF05EE000375774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCB5181DF05EE000375774 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		1E847ED51DF9B499006B15B7 /* GradeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeController.swift; sourceTree = "<group>"; };
 		1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
 		1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewData.swift; sourceTree = "<group>"; };
+		1E847EDB1E0453D5006B15B7 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		1EFCB5111DF05EE000375774 /* Codename-Graduation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codename-Graduation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFCB5141DF05EE000375774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EFCB5161DF05EE000375774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E847EDD1E045442006B15B7 /* College Search */ = {
+			isa = PBXGroup;
+			children = (
+				D0A278E91DFED876004E60FF /* Data */,
+				1EFCB5421DF067C900375774 /* SearchController.swift */,
+				1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */,
+				1E847EDB1E0453D5006B15B7 /* SearchResultsController.swift */,
+			);
+			name = "College Search";
+			sourceTree = "<group>";
+		};
+		1E847EDE1E04545D006B15B7 /* Grade Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				1E847ED51DF9B499006B15B7 /* GradeController.swift */,
+			);
+			name = "Grade Calculator";
+			sourceTree = "<group>";
+		};
+		1E847EDF1E04546A006B15B7 /* Teacher Info */ = {
+			isa = PBXGroup;
+			children = (
+				1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */,
+			);
+			name = "Teacher Info";
+			sourceTree = "<group>";
+		};
 		1EFCB5081DF05EE000375774 = {
 			isa = PBXGroup;
 			children = (
@@ -153,13 +182,11 @@
 		1EFCB5131DF05EE000375774 /* Codename-Graduation */ = {
 			isa = PBXGroup;
 			children = (
-				D0A278E91DFED876004E60FF /* Data */,
+				1E847EDF1E04546A006B15B7 /* Teacher Info */,
+				1E847EDE1E04545D006B15B7 /* Grade Calculator */,
+				1E847EDD1E045442006B15B7 /* College Search */,
 				1EFCB5141DF05EE000375774 /* AppDelegate.swift */,
 				1EFCB5161DF05EE000375774 /* ViewController.swift */,
-				1EFCB5421DF067C900375774 /* SearchController.swift */,
-				1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */,
-				1E847ED51DF9B499006B15B7 /* GradeController.swift */,
-				1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */,
 				1EFCB5181DF05EE000375774 /* Main.storyboard */,
 				1EFCB51B1DF05EE000375774 /* Assets.xcassets */,
 				D0A278BA1DF6EDB3004E60FF /* AppIcon.appiconset */,
@@ -388,6 +415,7 @@
 				1E847EDA1DF9BA4B006B15B7 /* SearchViewData.swift in Sources */,
 				1EFCB5431DF067C900375774 /* SearchController.swift in Sources */,
 				1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */,
+				1E847EDC1E0453D5006B15B7 /* SearchResultsController.swift in Sources */,
 				1E847ED61DF9B499006B15B7 /* GradeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
