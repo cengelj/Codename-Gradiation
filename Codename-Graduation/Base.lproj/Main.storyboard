@@ -19,7 +19,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="dataSource" destination="y5k-aN-eAP" id="7Eu-MR-aGP"/>
                             <outlet property="delegate" destination="BYZ-38-t0r" id="gZs-q0-SkC"/>
                         </connections>
                     </tableView>

@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewData: NSObject, UITableViewDataSource{
 	var data = [String]()
+	var filteredData = [String]()
     var collegeDictionary = [String:String]()
     let searchDataURL = "collegeInfo"
 	
@@ -19,6 +20,7 @@ class SearchViewData: NSObject, UITableViewDataSource{
 			//Only works because we're the only ones doing the saving...
 			collegeDictionary = cd as! [String : String]
 			data = dt as! [String]
+			filteredData = data
 		}
 		else{
 			if let aStreamReader = StreamReader(path: "/Users/s011878/Documents/XCode/Codename-Graduation/Codename-Graduation/collegeInfo.csv") {
@@ -81,7 +83,7 @@ class SearchViewData: NSObject, UITableViewDataSource{
 				}
 			}
 			data.sort()
-			
+			filteredData = data
 			UserDefaults.standard.setValue(collegeDictionary, forKey: "collegeDictionary")
 			UserDefaults.standard.setValue(data, forKey: "collegeArray")
 			UserDefaults.standard.synchronize()
@@ -93,18 +95,26 @@ class SearchViewData: NSObject, UITableViewDataSource{
 		tabRet.backgroundColor = UIColor.lightGray
 		tabRet.textLabel!.font = UIFont(name: "helvetica neue", size: 20)
 		tabRet.textLabel?.textAlignment = .center
-		tabRet.textLabel?.text = data[indexPath.row]
+		tabRet.textLabel?.text = filteredData[indexPath.row]
 		
 		return tabRet
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return data.count
+		return filteredData.count
 	}
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return 1
 	}
-	
+	func filter(searchText: String){
+		repeat{
+			
+		}while(Array(Character(searchText))[0] == "a")
+	}
+	func resetSearch(tableView: UITableView){
+		filteredData = data
+		tableView.reloadData()
+	}
 }
 
 // Credit Martin R @ http://stackoverflow.com/questions/24581517/read-a-file-url-line-by-line-in-swift

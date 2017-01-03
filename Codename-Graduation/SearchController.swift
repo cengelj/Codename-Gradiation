@@ -9,14 +9,17 @@
 import UIKit
 import WebKit
 
-class SearchController: UIViewController, UISearchResultsUpdating, UITableViewDelegate{
+class SearchController: UIViewController, UITableViewDelegate, UISearchBarDelegate{
 	var selectedID = ""
 	@IBOutlet var tableView: UITableView!
+	var searchDataSource = SearchViewData()
+	let searchController = UISearchController(searchResultsController: nil)
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let searchController = UISearchController(searchResultsController: nil)
-		searchController.searchResultsUpdater = self
+		tableView.dataSource = searchDataSource
+		searchController.searchBar.delegate = self
 		searchController.dimsBackgroundDuringPresentation = false
 		definesPresentationContext = true
 		tableView.tableHeaderView = searchController.searchBar
@@ -25,9 +28,8 @@ class SearchController: UIViewController, UISearchResultsUpdating, UITableViewDe
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	func updateSearchResults(for searchController: UISearchController){
-		print("\(searchController.searchBar.text)")
-		//manage the searching
+	func searchBar(_ searchBar: UISearchBar, textDidChange: String) {
+		searchDataSource.filter(searchText: textDidChange)
 	}
 	func tableView(_: UITableView, didSelectRowAt: IndexPath){
 		let searchResultsController = SearchResultsController()
@@ -41,4 +43,6 @@ class SearchController: UIViewController, UISearchResultsUpdating, UITableViewDe
 
 		print("ID: \(selectedID)")
 	}
+	
+	
 }
