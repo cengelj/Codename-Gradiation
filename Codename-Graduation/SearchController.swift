@@ -28,9 +28,14 @@ class SearchController: UIViewController, UITableViewDelegate, UISearchBarDelega
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	func searchBar(_ searchBar: UISearchBar, textDidChange: String) {
-		searchDataSource.filter(searchText: textDidChange)
+	
+	func searchBarTextDidEndEditing(_ searchBar: UISearchBar){
+		searchDataSource.filter(searchText: searchBar.text!, tableView: tableView)
 	}
+	func searchBarTextDidBeginEditing(_ searchBar: UISearchBar){
+		searchDataSource.resetSearch(tableView: tableView)
+	}
+	
 	func tableView(_: UITableView, didSelectRowAt: IndexPath){
 		let searchResultsController = SearchResultsController()
 		var arr = Array(UserDefaults.standard.array(forKey: "collegeArray")!)

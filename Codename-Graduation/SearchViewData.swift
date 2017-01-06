@@ -106,10 +106,14 @@ class SearchViewData: NSObject, UITableViewDataSource{
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return 1
 	}
-	func filter(searchText: String){
-		repeat{
-			
-		}while(Array(Character(searchText))[0] == "a")
+	func filter(searchText: String, tableView: UITableView){
+		resetSearch(tableView: tableView)
+		for i in stride(from: filteredData.count-1, through: 0, by: -1){
+			if filteredData[i].contains(searchText) == false{
+				filteredData.remove(at: i)
+			}
+		}
+		tableView.reloadData()
 	}
 	func resetSearch(tableView: UITableView){
 		filteredData = data
