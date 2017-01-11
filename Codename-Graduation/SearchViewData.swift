@@ -27,6 +27,7 @@ class SearchViewData: NSObject, UITableViewDataSource{
 				defer {
 					aStreamReader.close()
 				}
+				//PLEASE DONT TOUCH, IT WORKS BUT ANY CHANGES AT ALL COULD MAKE IT NOT
 				while let line = aStreamReader.nextLine() {
 					var nameFound = false
 					var nameEnd = true
@@ -113,7 +114,12 @@ class SearchViewData: NSObject, UITableViewDataSource{
 				filteredData.remove(at: i)
 			}
 		}
-		tableView.reloadData()
+		if filteredData.count == 0{
+			resetSearch(tableView: tableView)
+		}
+		else{
+			tableView.reloadData()
+		}
 	}
 	func resetSearch(tableView: UITableView){
 		filteredData = data

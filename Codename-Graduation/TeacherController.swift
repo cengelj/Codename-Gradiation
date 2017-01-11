@@ -8,6 +8,12 @@
 
 import UIKit
 
-class TeacherController: UIViewController{
+class TeacherController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+	}
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return filteredData.count
+	}
 }
