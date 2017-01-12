@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E57D9731E23DDAB0015E142 /* AddTeacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E57D9721E23DDAB0015E142 /* AddTeacher.swift */; };
 		1E57D9751E23DDBA0015E142 /* TeacherViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E57D9741E23DDBA0015E142 /* TeacherViewer.swift */; };
+		1E57D9771E2664B90015E142 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E57D9761E2664B90015E142 /* Teacher.swift */; };
 		1E847ED61DF9B499006B15B7 /* GradeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED51DF9B499006B15B7 /* GradeController.swift */; };
 		1E847ED81DF9B4A3006B15B7 /* TeacherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */; };
 		1E847EDA1DF9BA4B006B15B7 /* SearchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		1E57D9721E23DDAB0015E142 /* AddTeacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeacher.swift; sourceTree = "<group>"; };
 		1E57D9741E23DDBA0015E142 /* TeacherViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherViewer.swift; sourceTree = "<group>"; };
+		1E57D9761E2664B90015E142 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		1E847ED51DF9B499006B15B7 /* GradeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeController.swift; sourceTree = "<group>"; };
 		1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherController.swift; sourceTree = "<group>"; };
 		1E847ED91DF9BA4B006B15B7 /* SearchViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewData.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				1E847ED71DF9B4A3006B15B7 /* TeacherController.swift */,
 				1E57D9721E23DDAB0015E142 /* AddTeacher.swift */,
 				1E57D9741E23DDBA0015E142 /* TeacherViewer.swift */,
+				1E57D9761E2664B90015E142 /* Teacher.swift */,
 			);
 			name = "Teacher Info";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				1EFCB5151DF05EE000375774 /* AppDelegate.swift in Sources */,
 				1E847EDC1E0453D5006B15B7 /* SearchResultsController.swift in Sources */,
 				1E847ED61DF9B499006B15B7 /* GradeController.swift in Sources */,
+				1E57D9771E2664B90015E142 /* Teacher.swift in Sources */,
 				1E57D9751E23DDBA0015E142 /* TeacherViewer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

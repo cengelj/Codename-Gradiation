@@ -173,7 +173,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Add New Teacher"/>
                                 <connections>
-                                    <segue destination="RYr-9r-URc" kind="show" id="gsq-mg-9sA"/>
+                                    <segue destination="RYr-9r-URc" kind="popoverPresentation" popoverAnchorView="A8y-TY-B7Z" id="Ucg-lP-j7M">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,6 +190,9 @@
                             <constraint firstItem="CKO-iK-GSH" firstAttribute="top" secondItem="A8y-TY-B7Z" secondAttribute="bottom" id="rZv-D9-DVO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="CKO-iK-GSH" id="wt8-4d-LHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boc-vt-lzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +214,9 @@
                                 <rect key="frame" x="-4" y="615" width="383" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneClicked:" destination="RYr-9r-URc" eventType="touchUpInside" id="eHA-o5-I1P"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teacher Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-BI-sGG">
                                 <rect key="frame" x="16" y="141" width="343" height="30"/>
@@ -243,10 +251,20 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hrr-SK-yQM">
                                 <rect key="frame" x="212" y="281" width="149" height="31"/>
                             </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZ3-Ix-vk7">
+                                <rect key="frame" x="310" y="331" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curves Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpX-L0-iRT">
+                                <rect key="frame" x="16" y="341" width="98" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KK9-BI-sGG" firstAttribute="leading" secondItem="826-sL-Qda" secondAttribute="leadingMargin" id="00T-j6-mbe"/>
+                            <constraint firstItem="zpX-L0-iRT" firstAttribute="height" secondItem="UZ3-Ix-vk7" secondAttribute="height" id="8m8-fV-Qnl"/>
                             <constraint firstItem="Upp-dk-w0H" firstAttribute="top" secondItem="rQX-sB-9Dp" secondAttribute="bottom" constant="20" id="9dR-WS-ZRP"/>
                             <constraint firstItem="hrr-SK-yQM" firstAttribute="height" secondItem="xjA-bI-byv" secondAttribute="height" id="EZd-lQ-SCU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b7Z-Zd-Gi1" secondAttribute="trailing" id="FUe-eb-LJf"/>
@@ -256,20 +274,31 @@
                             <constraint firstItem="xjA-bI-byv" firstAttribute="top" secondItem="Upp-dk-w0H" secondAttribute="bottom" constant="20" id="Sbi-yH-9Av"/>
                             <constraint firstItem="b7Z-Zd-Gi1" firstAttribute="height" secondItem="Upp-dk-w0H" secondAttribute="height" id="SdN-Nr-ODW"/>
                             <constraint firstItem="KK9-BI-sGG" firstAttribute="top" secondItem="yQK-hI-g3s" secondAttribute="bottom" constant="77" id="SnE-Aj-1VE"/>
+                            <constraint firstItem="UZ3-Ix-vk7" firstAttribute="top" secondItem="hrr-SK-yQM" secondAttribute="bottom" constant="20" id="YjO-Td-asq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hrr-SK-yQM" secondAttribute="trailing" id="c2V-JL-KsG"/>
                             <constraint firstItem="b7Z-Zd-Gi1" firstAttribute="top" secondItem="lqj-1J-czb" secondAttribute="bottom" constant="20" id="cGj-sC-TmM"/>
                             <constraint firstItem="tNv-aS-zCm" firstAttribute="top" secondItem="i0d-O3-3U2" secondAttribute="bottom" constant="20" id="d8f-3f-coZ"/>
                             <constraint firstItem="hrr-SK-yQM" firstAttribute="top" secondItem="b7Z-Zd-Gi1" secondAttribute="bottom" constant="20" id="dRK-Ef-0Rs"/>
+                            <constraint firstItem="zpX-L0-iRT" firstAttribute="top" secondItem="xjA-bI-byv" secondAttribute="bottom" constant="20" id="gyt-Vg-cZh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KK9-BI-sGG" secondAttribute="trailing" id="hLE-sV-DCR"/>
                             <constraint firstItem="i0d-O3-3U2" firstAttribute="leading" secondItem="826-sL-Qda" secondAttribute="leadingMargin" constant="-20" id="lfG-lq-myZ"/>
                             <constraint firstItem="lqj-1J-czb" firstAttribute="height" secondItem="rQX-sB-9Dp" secondAttribute="height" id="lnt-lM-VtO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UZ3-Ix-vk7" secondAttribute="trailing" id="lqU-mh-RKb"/>
                             <constraint firstItem="rQX-sB-9Dp" firstAttribute="leading" secondItem="826-sL-Qda" secondAttribute="leadingMargin" id="qkb-gQ-Yps"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zpX-L0-iRT" secondAttribute="leading" id="rWE-eQ-HU9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lqj-1J-czb" secondAttribute="trailing" id="rWo-Nu-b1a"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xjA-bI-byv" secondAttribute="leading" id="tnB-KM-lGx"/>
                             <constraint firstItem="rQX-sB-9Dp" firstAttribute="top" secondItem="KK9-BI-sGG" secondAttribute="bottom" constant="18" id="tsq-Zw-2pC"/>
                             <constraint firstItem="Upp-dk-w0H" firstAttribute="leading" secondItem="826-sL-Qda" secondAttribute="leadingMargin" id="yrq-lc-JBi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="completionHW" destination="lqj-1J-czb" id="hon-59-KV5"/>
+                        <outlet property="nameText" destination="KK9-BI-sGG" id="O0V-Xo-65F"/>
+                        <outlet property="strictness" destination="hrr-SK-yQM" id="e3Y-Px-RGh"/>
+                        <outlet property="testCurve" destination="UZ3-Ix-vk7" id="4Lp-DB-IbV"/>
+                        <outlet property="testDiff" destination="b7Z-Zd-Gi1" id="9c0-R2-wRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmF-oG-v2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
