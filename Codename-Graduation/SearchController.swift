@@ -26,8 +26,8 @@ class SearchController: UIViewController, UITableViewDelegate, UISearchBarDelega
 		let backgroundImage = UIImage(named: "bg1.png")
 		let imageView = UIImageView(image: backgroundImage)
 		self.tableView.backgroundView = imageView
-		tableView.tableFooterView = UIView(frame: CGRectZero)
-		imageView.contentMode = .ScaleAspectFit
+		//tableView.tableFooterView = UIView(frame: CGRect.zero)
+		imageView.contentMode = .scaleAspectFit
 	}
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -53,10 +53,5 @@ class SearchController: UIViewController, UITableViewDelegate, UISearchBarDelega
 
 		print("ID: \(selectedID)")
 	}
-	
-	override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-		cell.backgroundColor = .clearColor()
-	}
-	
 	
 }
