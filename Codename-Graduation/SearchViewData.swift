@@ -93,7 +93,7 @@ class SearchViewData: NSObject, UITableViewDataSource{
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let tabRet = UITableViewCell()
-		tabRet.backgroundColor = UIColor.lightGray
+		tabRet.backgroundColor = .clear
 		tabRet.textLabel!.font = UIFont(name: "helvetica neue", size: 20)
 		tabRet.textLabel?.textAlignment = .center
 		tabRet.textLabel?.text = filteredData[indexPath.row]
