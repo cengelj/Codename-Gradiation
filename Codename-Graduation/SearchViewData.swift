@@ -16,14 +16,15 @@ class SearchViewData: NSObject, UITableViewDataSource{
 	
 	override init(){
 		super.init()
+        UserDefaults.resetStandardUserDefaults()
 		if let dt = UserDefaults.standard.array(forKey: "collegeArray"), let cd = UserDefaults.standard.dictionary(forKey: "collegeDictionary"){
 			//Only works because we're the only ones doing the saving...
 			collegeDictionary = cd as! [String : String]
 			data = dt as! [String]
 			filteredData = data
 		}
-		else{
-			if let aStreamReader = StreamReader(path: "/Users/s011878/Documents/XCode/Codename-Graduation/Codename-Graduation/collegeInfo.csv") {
+		else{///Users/s011878/Documents/XCode/Codename-Graduation/Codename-Graduation/
+			if let aStreamReader = StreamReader(path: "collegeInfo.csv") {
 				defer {
 					aStreamReader.close()
 				}
