@@ -219,43 +219,43 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teacher Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-BI-sGG">
-                                <rect key="frame" x="16" y="141" width="343" height="30"/>
+                                <rect key="frame" x="16" y="97" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lqj-1J-czb">
-                                <rect key="frame" x="310" y="179" width="51" height="31"/>
+                                <rect key="frame" x="310" y="135" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b7Z-Zd-Gi1">
-                                <rect key="frame" x="310" y="230" width="51" height="31"/>
+                                <rect key="frame" x="310" y="186" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tests Are Difficult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upp-dk-w0H">
-                                <rect key="frame" x="16" y="240" width="131.5" height="31"/>
+                                <rect key="frame" x="16" y="196" width="131.5" height="31"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grades Homework On Completion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQX-sB-9Dp">
-                                <rect key="frame" x="16" y="189" width="263" height="31"/>
+                                <rect key="frame" x="16" y="145" width="263" height="31"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strictness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-bI-byv">
-                                <rect key="frame" x="16" y="291" width="76" height="30"/>
+                                <rect key="frame" x="16" y="247" width="76" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hrr-SK-yQM">
-                                <rect key="frame" x="212" y="281" width="149" height="31"/>
+                                <rect key="frame" x="212" y="237" width="149" height="31"/>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZ3-Ix-vk7">
-                                <rect key="frame" x="310" y="331" width="51" height="31"/>
+                                <rect key="frame" x="310" y="287" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curves Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpX-L0-iRT">
-                                <rect key="frame" x="16" y="341" width="98" height="31"/>
+                                <rect key="frame" x="16" y="297" width="98" height="31"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="2904.8000000000002" y="859.52023988005999"/>
         </scene>
-        <!--View Controller-->
+        <!--Teacher Viewer-->
         <scene sceneID="jay-HI-5J4">
             <objects>
-                <viewController id="GxD-Hc-q09" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherViewer" id="GxD-Hc-q09" customClass="TeacherViewer" customModule="Codename_Graduation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pke-Ll-0xh"/>
                         <viewControllerLayoutGuide type="bottom" id="RKt-ez-7hX"/>
@@ -315,8 +315,59 @@
                     <view key="view" contentMode="scaleToFill" id="Abh-wb-5A2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tests Are Difficult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-Y2-uFb">
+                                <rect key="frame" x="122" y="180" width="131.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grades Homework On Completion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKx-mi-YVS">
+                                <rect key="frame" x="56" y="140" width="263" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strictness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1A-S7-j1B">
+                                <rect key="frame" x="149.5" y="220" width="76" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curves Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvb-Z8-XB2">
+                                <rect key="frame" x="138.5" y="260" width="98" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-JP-Nqe">
+                                <rect key="frame" x="158" y="70" width="59.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R1A-S7-j1B" firstAttribute="top" secondItem="JE9-Y2-uFb" secondAttribute="bottom" constant="20" id="FQe-n0-4WC"/>
+                            <constraint firstItem="sKx-mi-YVS" firstAttribute="centerX" secondItem="Abh-wb-5A2" secondAttribute="centerX" id="Ffd-ZN-Pt0"/>
+                            <constraint firstItem="R1A-S7-j1B" firstAttribute="centerX" secondItem="Abh-wb-5A2" secondAttribute="centerX" id="ILW-m1-uic"/>
+                            <constraint firstItem="yvb-Z8-XB2" firstAttribute="top" secondItem="R1A-S7-j1B" secondAttribute="bottom" constant="20" id="U47-ml-Mxd"/>
+                            <constraint firstItem="JE9-Y2-uFb" firstAttribute="centerX" secondItem="Abh-wb-5A2" secondAttribute="centerX" id="Ytt-UJ-Ub5"/>
+                            <constraint firstItem="sKx-mi-YVS" firstAttribute="top" secondItem="eVJ-JP-Nqe" secondAttribute="bottom" constant="50" id="ZPX-ZP-6VX"/>
+                            <constraint firstItem="yvb-Z8-XB2" firstAttribute="centerX" secondItem="Abh-wb-5A2" secondAttribute="centerX" id="ZZU-8h-3Gs"/>
+                            <constraint firstItem="eVJ-JP-Nqe" firstAttribute="top" secondItem="pke-Ll-0xh" secondAttribute="bottom" constant="50" id="cG0-pB-iFx"/>
+                            <constraint firstItem="JE9-Y2-uFb" firstAttribute="top" secondItem="sKx-mi-YVS" secondAttribute="bottom" constant="20" id="rWE-cW-xQX"/>
+                            <constraint firstItem="eVJ-JP-Nqe" firstAttribute="centerX" secondItem="Abh-wb-5A2" secondAttribute="centerX" id="txs-I7-byk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="compLabel" destination="sKx-mi-YVS" id="Onf-Lz-OKd"/>
+                        <outlet property="curveLabel" destination="yvb-Z8-XB2" id="MQH-4W-epQ"/>
+                        <outlet property="diffLabel" destination="JE9-Y2-uFb" id="9Kq-Ik-XAX"/>
+                        <outlet property="nameLabel" destination="eVJ-JP-Nqe" id="nIq-NI-whN"/>
+                        <outlet property="strictLabel" destination="R1A-S7-j1B" id="33d-xV-z2X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drn-qy-3fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,8 +14,8 @@ class TeacherController: UIViewController, UITableViewDataSource, UITableViewDel
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		if let teachers = UserDefaults.standard.array(forKey: "teachers"){
-			self.teachers = teachers as! [Teacher]
+		if let teach = UserDefaults.standard.object(forKey: "teachers") as? NSData{
+			self.teachers = (NSKeyedUnarchiver.unarchiveObject(with: teach as Data) as? [Teacher])!
 		}
 		else{
 			teachers = []
@@ -33,8 +33,11 @@ class TeacherController: UIViewController, UITableViewDataSource, UITableViewDel
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return teachers.count
 	}
-	func tableView(_: UITableView, didSelectRowAt: IndexPath){
-		
+	func tableView(_: UITableView, didSelectRowAt: IndexPath){		
+		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+		let destination = storyboard.instantiateViewController(withIdentifier: "TeacherViewer") as! TeacherViewer
+		destination.showTeacher(teacher: teachers[didSelectRowAt.row])
+		navigationController?.pushViewController(destination, animated: true)
 	}
 	func addTeacher(name: String, compHW: Bool, testDiff: Bool, testCurve: Bool, strict: Float){
 		var add = Teacher(name: name, compHW: compHW, testDiff: testDiff, testCurve: testCurve, strict: strict)
