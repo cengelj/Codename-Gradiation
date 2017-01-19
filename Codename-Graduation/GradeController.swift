@@ -19,6 +19,8 @@ class GradeController: UIViewController{
 		super.viewDidLoad()
 		
 		finalTextOutput.text = ""
+        let background = UIImage(named: "bg2.png")
+        self.view.backgroundColor = UIColor(patternImage: background!)
 	}
 	@IBAction func gradeWantedEntered(_ sender: UITextField) {
 		var str = sender.text!
